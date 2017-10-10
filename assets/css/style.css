@@ -1,0 +1,64 @@
+.agencyButton{
+  font-size: 20px;
+  display: block;
+  margin: 25px;
+}
+
+#header{
+  font-size: 40px;
+  text-align: left;
+  border-style: solid;
+  border-width: 2px;
+  background-color: #99ccff;
+}
+#logo{
+  padding: 5%;
+  background-image: url("../logo01.jpg");
+  background-size: cover;
+  text-align: left;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#headerText{
+  margin-left: 20px;
+  text-align: left;
+}
+
+#agency{
+  text-align: left;
+  border-style: solid;
+  border-width: 2px;
+  min-height: 600px;
+  background-color: #80bfff;
+}
+
+#agencySelect{
+  margin-left: 20px;
+  text-align: left;
+}
+
+#info{
+  border-style: solid;
+  border-width: 2px;
+  min-height: 600px;
+  background-color: #66b3ff;
+}
+
+#infoText{
+  margin-left: 20px;
+  text-align: left;
+}
+#calendar{
+  border-style: solid;
+  border-width: 2px;
+}
+
+#map{
+  background-image: url("../CapeCanaveralMap.jpg");
+  background-size: cover;
+  border-style: solid;
+  border-width: 2px;
+  min-width: 800px;
+  min-height: 800px;
+}

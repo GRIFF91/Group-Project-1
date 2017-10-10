@@ -21,10 +21,12 @@
 
   <div class="container">
     <div class="row">
-
+      <div id="header" class="col-sm-12">
         <div id="logo" class="col-sm-2">
+
         </div>
         <div id="headerText" class="col-sm-8">
+
           <h1>Where Dem Rockets At</h1><br>
           <h4>Select a space agency below to see when and where their next launch is happening. If you want to mark the launch in your calendar, press the “Mark in calendar” button.</h4>
         </div>
@@ -32,25 +34,25 @@
           <div id="calendar" class="col-sm-12">
             <button>Mark in calendar</div>
         </div>
-
+      </div>
     </div>
   </div>
 
   <div class="container">
     <div class="row">
       <div id="agency" class="col-sm-4">
-        <div id="agencySelect">
+        <div id="agencyText">
           <h3>Space Agencies</h3>
           <button class="agencyButton btn btn-defalt">N.A.S.A.</button>
-            <button class="agencyButton btn btn-defalt">Roscosmos</button>
-            <button class="agencyButton btn btn-defalt">C.N.S.A.</button>
-            <button class="agencyButton btn btn-defalt">E.S.A.</button>
-            <button class="agencyButton btn btn-defalt">Space X</button>
-            <button class="agencyButton btn btn-defalt">Blue Origin</button>
-          </div>
-
+          <button class="agencyButton btn btn-defalt">Roscosmos</button>
+          <button class="agencyButton btn btn-defalt">C.N.S.A.</button>
+          <button class="agencyButton btn btn-defalt">E.S.A.</button>
+          <button class="agencyButton btn btn-defalt">Space X</button>
+          <button class="agencyButton btn btn-defalt">Blue Origin</button>
+        </div>
+        <!-- <div id="info" class="col-sm-8"> -->
           <div id="infoText">
-            <h3>selected agency info</h3><br>
+            <h2>selected agency info</h2><br>
             <ul>
               <li>agency name</li>
               <li>launch time</li>
@@ -60,44 +62,58 @@
               <li>mission description</li>
             </ul>
           </div>
+        <!-- </div> -->
+      </div>
 
 
-        <div class="container">
-          <div class="row">
-            <div id="map" class="col-xsm=8">
-            </div>
+      <!-- <div id="info" class="col-sm-8">
+        <div id="infoText">
+          <h2>selected agency info</h2><br>
+          <ul>
+            <li>agency name</li>
+            <li>launch time</li>
+            <li>location</li>
+            <li>agency page link</li>
+            <li>wiki page link</li>
+            <li>mission description</li>
+          </ul>
+        </div>
+      </div> -->
+
+      <div class="container">
+        <div class="row">
+          <div id="map" class="col-xsm=8">
           </div>
         </div>
-    </div>
       </div>
 
     </div>
 
 
-<div class="row">
-  <div class="col-xsm-4">
 
-    <div id="agency-Info-Head">
+  </div>
+
+  <!-- <div class="row">
+    <div id="calendar" class="col-sm-12">
+      <button>Mark in calendar</div>
+  </div>
+</div> -->
+
+  <!-- <div class="container">
+    <div class="row">
+      <div id="map" class="col-sm=12">
+      </div>
     </div>
-
-    <div id="buttons" class="">
-  </div>
-
-  <div id="agencyInfo">
-  </div>
-
-</div>
-</div>
+  </div> -->
 
 
 
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-    <script type="text/javascript" src="assets/javascript/catchUp.js"></script>
+  <script type="text/javascript" src="assets/javascript/catchUp.js"></script>
 
 </body>
 
