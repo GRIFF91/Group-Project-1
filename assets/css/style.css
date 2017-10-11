@@ -1,64 +1,106 @@
-.agencyButton{
-  font-size: 20px;
-  display: block;
-  margin: 25px;
+#background {
+  height: 7680px;
+  width: 1280px;
+  margin: 0 auto;
+  background-image: url("../images/rocketAtBackgroundMoon.jpg")
 }
 
-#header{
+#parallax_layer1 {
+  position: fixed;
+  background: url(../images/3-cloud-png-image.png) no-repeat 400px 400px;
+  opacity: 1;
+  width: 100%;
+  height: 1000%;
+}
+
+#parallax_layer2 {
+  position: fixed;
+  background: url(../images/4-cloud-png-image.png) no-repeat 500px 200px;
+  opacity: .6;
+  width: 1000%;
+  height: 1000px;
+}
+
+.clearfix {
+/*   overflow: auto; */
+}
+.clearfix:befor, clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear:both;
+}
+
+#agency-Info-Head {
+  margin-top: 80px;
+  float: left;
+  color: white;
+  font-family: 'Roboto Slab', serif;
   font-size: 40px;
-  text-align: left;
+  margin: 20px;
+  text-align: center;
   border-style: solid;
-  border-width: 2px;
-  background-color: #99ccff;
+  /*border-width: 2px;*/
 }
-#logo{
-  padding: 5%;
-  background-image: url("../logo01.jpg");
-  background-size: cover;
+#name {
   text-align: left;
-  border-style: solid;
-  border-width: 2px;
-}
-
-#headerText{
   margin-left: 20px;
-  text-align: left;
+  float: left;
 }
 
-#agency{
+#sideInfo {
+  margin-top: 60px;
+  margin-left: 120px;
+  padding-left: 330px;
+  padding-right: 40px;
+text-align: left;
+
+
+}
+
+#buttonInfoBento {
+  border-radius: 25px;
+  background-color: white;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#buttonsAndInfo {
+  padding-top: 15px;
+  padding-left: 5px;
+  border-radius: 25px;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  font-family: 'Roboto Slab', serif;
   text-align: left;
+  margin: 20px;
   border-style: solid;
   border-width: 2px;
   min-height: 600px;
-  background-color: #80bfff;
+  overflow-y: scroll;
 }
 
-#agencySelect{
-  margin-left: 20px;
-  text-align: left;
-}
-
-#info{
+#agencyInfo {
+  border-radius: 25px;
+  float: left;
+  color: yellow;
+  margin: 20px;
   border-style: solid;
   border-width: 2px;
-  min-height: 600px;
-  background-color: #66b3ff;
+  min-height: 282px;
 }
 
-#infoText{
-  margin-left: 20px;
-  text-align: left;
-}
-#calendar{
-  border-style: solid;
-  border-width: 2px;
-}
-
-#map{
+#map {
+  border-radius: 25px;
+  float: right;
   background-image: url("../CapeCanaveralMap.jpg");
   background-size: cover;
+  margin: 20px;
+  padding: 300px;
   border-style: solid;
+  border-color: white;
   border-width: 2px;
-  min-width: 800px;
-  min-height: 800px;
+  max-width: 100%;
+  max-height: 100%;
 }
