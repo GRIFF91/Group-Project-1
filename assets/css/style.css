@@ -91,6 +91,10 @@ text-align: left;
   min-height: 282px;
 }
 
+.launchData {
+  padding-left: 1rem;
+}
+
 #map {
   border-radius: 25px;
   float: right;
