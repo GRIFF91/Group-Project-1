@@ -153,29 +153,26 @@ function nextLaunch(response) {
     var database = firebase.database();
     var clickCounter = 0;
     // FUNCTIONS + EVENTS
-    // --------------------------------------------------------------------------------
-
-    // On Click of Button
+    
+    // On Click of nextLaunch button
     $("#nextLaunch").on("click", function() {
       console.log("wasClicked");
       // Add to clickCounter
       clickCounter++;
 
-      //  Store Click Data to Firebase in a JSON property called clickCount
-      // Note how we are using the Firebase .set() method
+      //  Store Click Data to Firebase in a JSON property called nextCount
       database.ref().set({
         nextCount: clickCounter
       });
     });
 
-    // On Click of Button
+    // On Click of previousLaunch Button
     $("#previousLaunch").on("click", function() {
       console.log("wasClicked");
       // Add to clickCounter
       clickCounter++;
 
-      //  Store Click Data to Firebase in a JSON property called clickCount
-      // Note how we are using the Firebase .set() method
+      //  Store Click Data to Firebase in a JSON property called previousCount
       database.ref().set({
         previousCount: clickCounter
       });
