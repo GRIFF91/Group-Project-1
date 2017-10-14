@@ -135,3 +135,31 @@ function nextLaunch(response) {
     }
   });
 }
+
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA8w3DD9wCgqrCcouP8uzH8tli7diUXS8s",
+    authDomain: "group-project-1-d6af2.firebaseapp.com",
+    databaseURL: "https://group-project-1-d6af2.firebaseio.com",
+    projectId: "group-project-1-d6af2",
+    storageBucket: "",
+    messagingSenderId: "837337550423"
+  };
+  firebase.initializeApp(config);
+
+    // VARIABLES
+
+    // Get a reference to the database service
+    var database = firebase.database();
+    var clickCounter = 0;
+    // FUNCTIONS + EVENTS
+    // --------------------------------------------------------------------------------
+
+    // On Click of Button
+    $("#nextLaunch").on("click", function() {
+
+      clickCounter++;
+      //  Store Click Data to Firebase in a JSON property called clickCount
+      // Note how we are using the Firebase .set() method
+      database.ref().set("clickCount", clickCounter);
+    });
