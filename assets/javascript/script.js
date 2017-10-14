@@ -157,3 +157,46 @@ function showVideo(response, num) {
     window.open(url);
   })
 }
+
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA8w3DD9wCgqrCcouP8uzH8tli7diUXS8s",
+    authDomain: "group-project-1-d6af2.firebaseapp.com",
+    databaseURL: "https://group-project-1-d6af2.firebaseio.com",
+    projectId: "group-project-1-d6af2",
+    storageBucket: "",
+    messagingSenderId: "837337550423"
+  };
+  firebase.initializeApp(config);
+
+    // VARIABLES
+
+    // Get a reference to the database service
+    var database = firebase.database();
+    var nextCounter = 0;
+    var previousCounter = 0;
+    // FUNCTIONS + EVENTS
+    
+    // On Click of nextLaunch button
+    $("#nextLaunch").on("click", function() {
+      console.log("wasClicked");
+      // Add to clickCounter
+      nextCounter++;
+
+      //  Store Click Data to Firebase in a JSON property called nextCount
+      database.ref().set({
+        nextCount: nextCounter
+      });
+    });
+
+    // On Click of previousLaunch Button
+    $("#previousLaunch").on("click", function() {
+      console.log("wasClicked");
+      // Add to previousCounter
+      previousCounter++;
+
+      //  Store Click Data to Firebase in a JSON property called previousC ount
+      database.ref().set({
+        previousCount: previousCounter
+      });
+    });
