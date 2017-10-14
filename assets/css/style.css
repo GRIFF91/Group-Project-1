@@ -2,7 +2,8 @@
   height: 7680px;
   width: 1280px;
   margin: 0 auto;
-  background-image: url("../images/rocketAtBackgroundMoon.jpg")
+  background-image: url("../images/rocketAtBackgroundMoon.jpg");
+  z-index: -3;
 }
 
 #parallax_layer1 {
@@ -11,6 +12,8 @@
   opacity: 1;
   width: 100%;
   height: 1000%;
+  background-position: 40% 60%;
+  z-index: -2;
 }
 
 #parallax_layer2 {
@@ -19,12 +22,14 @@
   opacity: .6;
   width: 1000%;
   height: 1000%;
+  background-position: 80% 90%;
+  z-index: -1;
 }
 
 .clearfix {
 /*   overflow: auto; */
 }
-.clearfix:befor, clearfix:after {
+.clearfix:before, clearfix:after {
   content: " ";
   display: table;
 }
@@ -55,8 +60,10 @@
   padding-left: 330px;
   padding-right: 40px;
 text-align: left;
+}
 
-
+.prev-next-btns {
+  padding-left: 10rem;
 }
 
 #buttonInfoBento {
@@ -91,14 +98,15 @@ text-align: left;
   min-height: 282px;
 }
 
-.launchData {
+.launch-data {
   padding-left: 1rem;
 }
 
 #map {
   border-radius: 25px;
   float: right;
-  background-image: url("../CapeCanaveralMap.jpg");
+  /*background-image: url("../CapeCanaveralMap.jpg");*/
+  background-color: #efefef;
   background-size: cover;
   margin: 20px;
   padding: 300px;

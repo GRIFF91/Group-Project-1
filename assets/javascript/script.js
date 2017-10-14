@@ -5,6 +5,11 @@ var missionDescription = document.getElementById("missionDescription");
 var launchLocation = document.getElementById("launchLocation");
 var agencyName = document.getElementById("agencyName");
 var launchTime = document.getElementById("launchTime");
+var launchImgBtn = document.getElementById("launchImgBtn");
+var launchVidBtn = document.getElementById("launchVidBtn");
+var viewWindow = document.getElementById("map");
+var showMap = document.getElementById("showMapBtn");
+var launchVid = document.getElementById("launchVid");
 var launchPrev = document.getElementById("previousLaunch");
 var launchNext = document.getElementById("nextLaunch");
 var queryURL = "https://launchlibrary.net/1.2/launch/next/20";
@@ -30,7 +35,7 @@ var map;
 function initialize() {
   geocoder = new google.maps.Geocoder();
   // var latlng = new google.maps.LatLng(28.396837, ‎-80.605659);
-  var latlng = new google.maps.LatLng(-34.397, 150.644);
+  var latlng = new google.maps.LatLng(35.787743, -78.644257);
   var mapOptions = {
     zoom: 8,
     center: latlng
@@ -54,11 +59,6 @@ function codeAddress(location) {
 }
 
 function displayLaunchInfo(num, response) {
-  // var launchName = document.getElementById("launchName");
-  // var missionDescription = document.getElementById("missionDescription");
-  // var launchLocation = document.getElementById("launchLocation");
-  // var agencyName = document.getElementById("agencyName");
-  // var launchTime = document.getElementById("launchTime");
 
   launchName.textContent = response.launches[num].name;
   missionDescription.textContent = response.launches[num].missions[0].description;
@@ -66,16 +66,15 @@ function displayLaunchInfo(num, response) {
   agencyName.textContent = response.launches[num].rocket.agencies[0].name;
   launchTime.textContent = response.launches[num].net;
 
-  // displayLocation();
-  initialize();
-  // setTimeout(codeAddress, 200, response.launches[num].location.name);
-  codeAddress(response.launches[num].location.name);
-}
 
-// function displayLocation() {
-//   initialize();
-//
-// }
+
+  // displayLocation();
+  // initialize();
+  // codeAddress(response.launches[num].location.name);
+  showingMap(response, num);
+  showRocketImg(response, num);
+  showVideo(response, num);
+}
 
 
 
@@ -87,6 +86,7 @@ $.ajax({
 
         .done(function(response) {
           console.log(response);
+          initialize();
           displayLaunchInfo(launchNum, response);
           previousLaunch(response);
           nextLaunch(response);
@@ -113,25 +113,47 @@ $.ajax({
 
         });
 
-        // <li id="changeInfoBtns">
-        //   <button type="button" id="previousLaunch" class="btn btn-default">Previous Launch</button>
-        //   <button type="button" id="nextLaunch" class="btn btn-default">Next Launch</button>
-        // </li>
 
-function previousLaunch(response) {
+function previousLaunch(response, num) {
   launchPrev.addEventListener("click", function() {
+    console.log("previous");
     if (launchNum > 0) {
       launchNum--;
       displayLaunchInfo(launchNum, response);
+      // showingMap(response, num);
+
     }
   });
 }
 
-function nextLaunch(response) {
+function nextLaunch(response, num) {
   launchNext.addEventListener("click", function() {
     if(launchNum < 20) {
       launchNum++;
       displayLaunchInfo(launchNum, response);
+      // showingMap(response, num);
     }
   });
+}
+
+function showingMap(response, num) {
+  showMap.addEventListener("click", function() {
+    initialize();
+    codeAddress(response.launches[num].location.name);
+  })
+}
+
+function showRocketImg(response, num) {
+  var url = response.launches[num].rocket.imageURL;
+  launchImgBtn.addEventListener("click", function() {
+    viewWindow.textContent = "";
+    viewWindow.style.backgroundImage = "url("+ url + ")";
+  })
+}
+
+function showVideo(response, num) {
+  var url = response.launches[num].vidURLs[0];
+  launchVidBtn.addEventListener("click", function() {
+    window.open(url);
+  })
 }
