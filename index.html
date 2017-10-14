@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Where dem Rockets at</title>
+
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
   <link rel="Stylesheet" href="assets/css/reset.css">
@@ -14,15 +16,17 @@
   <link rel="Stylesheet" href="assets/css/style.css">
 
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Bootstrap 3.3.7 CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
 
 </head>
 
 <body>
 
-  <div id="parallax_layer1"></div>
-  <div id="parallax_layer2"></div>
-  <div id="background" </div>
+
+  <!-- <div id="parallax_layer1"></div>
+  <div id="parallax_layer2"></div> -->
+  <div id="background">
 
     <div id="buttonInfoBento" class="container">
       <div class="row">
@@ -33,36 +37,48 @@
             <h4>Select a space agency below to see when and where their next launch is happening. If you want to mark the launch in your calendar, press the “Add Event to Cadlendar” button.</h4></div>
         </div>
       </div>
+      <div class="row prev-next-btns">
+        <button type="button" id="previousLaunch" class="btn btn-default">Previous Launch</button>
+        <button type="button" id="nextLaunch" class="btn btn-default">Next Launch</button>
+      </div>
 
 
       <!-- <div id="buttonInfoBento" class="container"> -->
       <div class="row">
         <div id="buttonsAndInfo" class="col-sml-12 col-lg-4 clearfix">
-          <button class="agencyButton btn btn-defalt">N.A.S.A.</button>
-          <button class="agencyButton btn btn-defalt">Roscosmos</button>
-          <button class="agencyButton btn btn-defalt">C.N.S.A.</button>
-          <button class="agencyButton btn btn-defalt">E.S.A.</button>
-          <button class="agencyButton btn btn-defalt">Space X</button>
-          <button class="agencyButton btn btn-defalt">Blue Origin</button>
           <ul>
+            <li><h3>Launch Name</h3></li>
+            <li id="launchName" class="launch-data"></li>
+            <li id="showMap">
+
+            </li>
+            <li id="launchImg">
+              <button type="button" id="showMapBtn" class="btn btn-default">Show Map</button>
+              <button type="button" id="launchImgBtn" class="btn btn-default">Show Rocket Image</button>
+              <button type="button" id="launchVidBtn" class="btn btn-default">Show Rocket Video</button>
+            </li>
+            <li id="launchVid">
+
+            </li>
             <li>
               <h3>Agency</h3></li>
-            <li>Sed accumsan tristique</li>
+            <li id="agencyName" class="launch-data"><!--Sed accumsan tristique--></li>
             <li>
               <h3>Launch Time</h3></li>
-            <li>13:05:27</li>
+            <li id="launchTime" class="launch-data"><!--13:05:27--></li>
             <li>
               <h3>Location</h3></li>
-            <li>massa at luctus</h1>
+            <li id="launchLocation" class="launch-data"><!--massa at luctus--></h1>
               <li>
-                <h1>Agency Link<h1></li>
-<li>wwwphasellusdotmoc</li>
-<li><h1>wiki Link</h1></li>
-              <li>wwwvivamusdotcom
-                <li>
-                  <h1>mission description</h1></li>
-                <li>Etiam magna quam, rutrum et sodales nec, eleifend sit amet magna. Mauris massa lectus, finibus vitae orci non, ornare euismod urna. In eu justo a ipsum vehicula lobortis nec ut nisl. Aenean a ornare ante. Vivamus dapibus dui a tristique
-                  bibendum. Donec iaculis dapibus mauris, eu luctus ligula elementum a. Fusce viverra lobortis mauris in accumsan.</li>
+                <h3>Agency Link<h3></li>
+            <li class="launch-data">wwwphasellusdotmoc</li>
+
+
+                <li class="launch-data">
+                  <h3>mission description</h3></li>
+                <li id="missionDescription" class="launch-data"><!--Etiam magna quam, rutrum et sodales nec, eleifend sit amet magna. Mauris massa lectus, finibus vitae orci non, ornare euismod urna. In eu justo a ipsum vehicula lobortis nec ut nisl. Aenean a ornare ante. Vivamus dapibus dui a tristique
+                  bibendum. Donec iaculis dapibus mauris, eu luctus ligula elementum a. Fusce viverra lobortis mauris in accumsan.--></li>
+
           </ul>
         </div>
         <div id="map" class="col-lg-7 col-sml-12">
@@ -71,23 +87,34 @@
     </div>
 
 
-
-
-
-
-
-
-
   </div>
 
+  <div id="parallax_layer1"></div>
+  <div id="parallax_layer2"></div>
 
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+  <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+  <!-- Bootstrap javascript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <!-- Google Maps API -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3LQOft6RS7iaaQCq4iMgW7hHIvq17J7c&callback=initMap">
+    </script>
+
+<!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+
+    <!-- App JavaScript -->
   <script type="text/javascript" src="assets/javascript/script.js"></script>
+
+  <!-- Bo's Testing For Google Maps API
+  <script src="assets/javascript/mapScriptTesting.js"></script> -->
+
+
 
 </body>
 
