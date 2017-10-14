@@ -151,29 +151,30 @@ function nextLaunch(response) {
 
     // Get a reference to the database service
     var database = firebase.database();
-    var clickCounter = 0;
+    var nextCounter = 0;
+    var previousCounter = 0;
     // FUNCTIONS + EVENTS
     
     // On Click of nextLaunch button
     $("#nextLaunch").on("click", function() {
       console.log("wasClicked");
       // Add to clickCounter
-      clickCounter++;
+      nextCounter++;
 
       //  Store Click Data to Firebase in a JSON property called nextCount
       database.ref().set({
-        nextCount: clickCounter
+        nextCount: nextCounter
       });
     });
 
     // On Click of previousLaunch Button
     $("#previousLaunch").on("click", function() {
       console.log("wasClicked");
-      // Add to clickCounter
-      clickCounter++;
+      // Add to previousCounter
+      previousCounter++;
 
-      //  Store Click Data to Firebase in a JSON property called previousCount
+      //  Store Click Data to Firebase in a JSON property called previousC ount
       database.ref().set({
-        previousCount: clickCounter
+        previousCount: previousCounter
       });
     });
