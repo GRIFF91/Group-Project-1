@@ -86,7 +86,7 @@ $.ajax({
 
         .done(function(response) {
           console.log(response);
-          initialize();
+          // initialize();
           displayLaunchInfo(launchNum, response);
           previousLaunch(response);
           nextLaunch(response);
@@ -115,11 +115,17 @@ $.ajax({
 
 
 function previousLaunch(response, num) {
+  var win = $("#map");
   launchPrev.addEventListener("click", function() {
     console.log("previous");
     if (launchNum > 0) {
       launchNum--;
       displayLaunchInfo(launchNum, response);
+      win.empty();
+      win.css({
+        "background-image":"url('assets/images/cartoonRocketLaunchingWithText.png')",
+        "background-size": "100%"
+      });
       // showingMap(response, num);
 
     }
@@ -127,10 +133,16 @@ function previousLaunch(response, num) {
 }
 
 function nextLaunch(response, num) {
+  var win = $("#map");
   launchNext.addEventListener("click", function() {
     if(launchNum < 20) {
       launchNum++;
       displayLaunchInfo(launchNum, response);
+      win.empty();
+      win.css({
+        "background-image":"url('assets/images/cartoonRocketLaunchingWithText.png')",
+        "background-size": "100%"
+      });
       // showingMap(response, num);
     }
   });
@@ -144,10 +156,15 @@ function showingMap(response, num) {
 }
 
 function showRocketImg(response, num) {
+  var win = $("#map");
   var url = response.launches[num].rocket.imageURL;
   launchImgBtn.addEventListener("click", function() {
-    viewWindow.textContent = "";
-    viewWindow.style.backgroundImage = "url("+ url + ")";
+    win.empty();
+    win.css({
+      "background-image": "url(" + url + ")",
+      "background-size":"cover"
+    });
+    // viewWindow.style.backgroundImage = "url("+ url + ")";
   })
 }
 
@@ -176,7 +193,7 @@ function showVideo(response, num) {
     var nextCounter = 0;
     var previousCounter = 0;
     // FUNCTIONS + EVENTS
-    
+
     // On Click of nextLaunch button
     $("#nextLaunch").on("click", function() {
       console.log("wasClicked");

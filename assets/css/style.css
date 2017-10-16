@@ -108,9 +108,10 @@
 #map {
   border-radius: 25px;
   float: right;
-  background-image: url("../images/CapeCanaveralMap.jpg");
+  background-image: url("../images/cartoonRocketLaunchingWithText.png");
   background-color: #efefef;
-  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
   margin: 20px;
   padding: 300px;
   border-style: solid;
@@ -118,4 +119,5 @@
   border-width: 2px;
   max-width: 100%;
   max-height: 100%;
+  z-index: 10;
 }
