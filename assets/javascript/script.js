@@ -19,13 +19,15 @@ var launchNum = 0;
 
 // Create the parallax function.
 function parallax(){
-  var parallax_layer1 = document.getElementById('parallax_layer1');
-  var parallax_layer2 = document.getElementById('parallax_layer2');
+  var parallax_layer1_rocket = document.getElementById('parallax_layer1_rocket');
+  var parallax_layer2_4clouds = document.getElementById('parallax_layer2_4clouds');
+    var parallax_layer3_5clouds = document.getElementById('parallax_layer3_5clouds');
   // Dividing the pageYOffset by a positive number will slow down the parallax effect.
   // Adding a '-' before (window.pageYOffset) makes the parallax
   // layer move up instead of down when scrolling.
-  parallax_layer1.style.top = -(window.pageYOffset/20)+'px';
-  parallax_layer2.style.top = -(window.pageYOffset/6)+'px';
+  parallax_layer1_rocket.style.top = -(window.pageYOffset*2)+'px';
+  parallax_layer2_4clouds.style.top = -(window.pageYOffset/10)+'px';
+    parallax_layer3_5clouds.style.top = -(window.pageYOffset/10)+'px';
 }
 // Add an event listener which will detect scrolling and run
 // the parallax function.
