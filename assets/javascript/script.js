@@ -1,4 +1,3 @@
-console.log("test");
 
 var launchName = document.getElementById("launchName");
 var missionDescription = document.getElementById("missionDescription");
@@ -175,6 +174,7 @@ function showVideo(response, num) {
     var database = firebase.database();
     var nextCounter = 0;
     var previousCounter = 0;
+    var mapCounter = 0;
     // FUNCTIONS + EVENTS
 
     // On Click of nextLaunch button
@@ -195,8 +195,20 @@ function showVideo(response, num) {
       // Add to previousCounter
       previousCounter++;
 
-      //  Store Click Data to Firebase in a JSON property called previousC ount
+      //  Store Click Data to Firebase in a JSON property called previous Count
       database.ref().set({
         previousCount: previousCounter
+      });
+    });
+
+// On Click of showMapBtn Button
+    $("#showMapBtn").on("click", function() {
+      console.log("wasClicked");
+      // Add to previousCounter
+      mapCounter++;
+
+      //  Store Click Data to Firebase in a JSON property called mapCount
+      database.ref().set({
+        mapCount: mapCounter
       });
     });
