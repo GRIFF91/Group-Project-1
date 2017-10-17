@@ -89,7 +89,7 @@ $.ajax({
         })
 
         .done(function(response) {
-          console.log(response);
+          // console.log(response);
           displayLaunchInfo(launchNum, response);
           previousLaunch(response);
           nextLaunch(response);
@@ -181,7 +181,6 @@ function showVideo(response, num) {
 
     // On Click of nextLaunch button
     $("#nextLaunch").on("click", function() {
-      console.log("wasClicked");
       // Add to clickCounter
       nextCounter++;
 
@@ -193,7 +192,6 @@ function showVideo(response, num) {
 
     // On Click of previousLaunch Button
     $("#previousLaunch").on("click", function() {
-      console.log("wasClicked");
       // Add to previousCounter
       previousCounter++;
 
@@ -205,7 +203,6 @@ function showVideo(response, num) {
 
 // On Click of showMapBtn Button
     $("#showMapBtn").on("click", function() {
-      console.log("wasClicked");
       // Add to previousCounter
       mapCounter++;
 
@@ -217,7 +214,6 @@ function showVideo(response, num) {
 
 // On Click of launchImgBtn Button
     $("#launchImgBtn").on("click", function() {
-      console.log("wasClicked");
       // Add to previousCounter
       launchImg++;
 
@@ -229,7 +225,6 @@ function showVideo(response, num) {
 
     // On Click of launchVidBtn Button
     $("#launchVidBtn").on("click", function() {
-      console.log("wasClicked");
       // Add to previousCounter
       launchVid++;
 
