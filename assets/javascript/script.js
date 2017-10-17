@@ -1,4 +1,3 @@
-console.log("test");
 
 var launchName = document.getElementById("launchName");
 var missionDescription = document.getElementById("missionDescription");
@@ -90,7 +89,7 @@ $.ajax({
         })
 
         .done(function(response) {
-          console.log(response);
+          // console.log(response);
           displayLaunchInfo(launchNum, response);
           previousLaunch(response);
           nextLaunch(response);
@@ -175,11 +174,13 @@ function showVideo(response, num) {
     var database = firebase.database();
     var nextCounter = 0;
     var previousCounter = 0;
+    var mapCounter = 0;
+    var launchImg = 0;
+    var launchVid = 0;
     // FUNCTIONS + EVENTS
 
     // On Click of nextLaunch button
     $("#nextLaunch").on("click", function() {
-      console.log("wasClicked");
       // Add to clickCounter
       nextCounter++;
 
@@ -191,12 +192,44 @@ function showVideo(response, num) {
 
     // On Click of previousLaunch Button
     $("#previousLaunch").on("click", function() {
-      console.log("wasClicked");
       // Add to previousCounter
       previousCounter++;
 
-      //  Store Click Data to Firebase in a JSON property called previousC ount
+      //  Store Click Data to Firebase in a JSON property called previous Count
       database.ref().set({
         previousCount: previousCounter
+      });
+    });
+
+// On Click of showMapBtn Button
+    $("#showMapBtn").on("click", function() {
+      // Add to previousCounter
+      mapCounter++;
+
+      //  Store Click Data to Firebase in a JSON property called mapCount
+      database.ref().set({
+        mapCount: mapCounter
+      });
+    });
+
+// On Click of launchImgBtn Button
+    $("#launchImgBtn").on("click", function() {
+      // Add to previousCounter
+      launchImg++;
+
+      //  Store Click Data to Firebase in a JSON property called imgCount
+      database.ref().set({
+        imgCount: launchImg
+      });
+    });
+
+    // On Click of launchVidBtn Button
+    $("#launchVidBtn").on("click", function() {
+      // Add to previousCounter
+      launchVid++;
+
+      //  Store Click Data to Firebase in a JSON property called imgCount
+      database.ref().set({
+        vidCount: launchVid
       });
     });
