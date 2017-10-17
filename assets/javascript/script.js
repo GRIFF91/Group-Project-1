@@ -175,6 +175,8 @@ function showVideo(response, num) {
     var nextCounter = 0;
     var previousCounter = 0;
     var mapCounter = 0;
+    var launchImg = 0;
+    var launchVid = 0;
     // FUNCTIONS + EVENTS
 
     // On Click of nextLaunch button
@@ -210,5 +212,29 @@ function showVideo(response, num) {
       //  Store Click Data to Firebase in a JSON property called mapCount
       database.ref().set({
         mapCount: mapCounter
+      });
+    });
+
+// On Click of launchImgBtn Button
+    $("#launchImgBtn").on("click", function() {
+      console.log("wasClicked");
+      // Add to previousCounter
+      launchImg++;
+
+      //  Store Click Data to Firebase in a JSON property called imgCount
+      database.ref().set({
+        imgCount: launchImg
+      });
+    });
+
+    // On Click of launchVidBtn Button
+    $("#launchVidBtn").on("click", function() {
+      console.log("wasClicked");
+      // Add to previousCounter
+      launchVid++;
+
+      //  Store Click Data to Firebase in a JSON property called imgCount
+      database.ref().set({
+        vidCount: launchVid
       });
     });
