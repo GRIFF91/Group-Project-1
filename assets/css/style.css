@@ -105,6 +105,18 @@
   padding-left: 1rem;
 }
 
+#rocketInfo:link, #rocketInfo:visited {
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  text-align: left;
+}
+
+#rocketInfo:hover, #rocketInfo:active {
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  text-align: left;
+}
+
 #map {
   border-radius: 25px;
   float: right;

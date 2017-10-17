@@ -5,6 +5,7 @@ var missionDescription = document.getElementById("missionDescription");
 var launchLocation = document.getElementById("launchLocation");
 var agencyName = document.getElementById("agencyName");
 var launchTime = document.getElementById("launchTime");
+var rocketInfo = document.getElementById("rocketInfo");
 var launchImgBtn = document.getElementById("launchImgBtn");
 var launchVidBtn = document.getElementById("launchVidBtn");
 var viewWindow = document.getElementById("map");
@@ -65,6 +66,8 @@ function displayLaunchInfo(num, response) {
   launchLocation.textContent = response.launches[num].location.name;
   agencyName.textContent = response.launches[num].rocket.agencies[0].name;
   launchTime.textContent = response.launches[num].net;
+  rocketInfo.textContent = response.launches[num].rocket.agencies[0].wikiURL;
+  rocketInfo.setAttribute("href",response.launches[num].rocket.agencies[0].wikiURL)
 
 
 
@@ -86,31 +89,9 @@ $.ajax({
 
         .done(function(response) {
           console.log(response);
-          // initialize();
           displayLaunchInfo(launchNum, response);
           previousLaunch(response);
           nextLaunch(response);
-
-          console.log(queryURL);
-          console.log(response);
-          // mission name
-          console.log(response.launches[0].name);
-
-          // mission description
-          console.log(response.launches[0].missions[0].description);
-
-          // launch location
-          console.log(response.launches[0].location.name);
-          // Agency
-          console.log(response.launches[0].rocket.agencies[0].name);
-
-          // ImageURL
-          console.log(response.launches[0].rocket.imageURL);
-          // VidioURL
-          console.log(response.launches[0].vidURLs[0]);
-          // Launch Date and Time
-          console.log(response.launches[0].net);
-
         });
 
 
