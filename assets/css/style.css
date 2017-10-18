@@ -1,5 +1,3 @@
-h2 {
-}
 
 h3 {
   text-decoration: underline;
@@ -11,7 +9,6 @@ h3 {
   width: 1280px;
   margin: 0 auto;
   background-image: url("../images/wdraBackground02.png");
-
 }
 
 #parallax_layer1_stars01 {
