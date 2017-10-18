@@ -3,9 +3,20 @@ h3 {
   text-align: center;
 }
 
+#whiteToBlack {
+  /*width: 100vw;
+  min-height: 100vh;
+  background-color: #000;
+  display: inline;*/
+  /*z-index: -99999;*/
+}
+
 #background {
-  height: 10240px;
-  width: 1280px;
+  height: 14240px;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*width: 1280px;*/
   margin: 0 auto;
   background-image: url("../images/wdraBackground02.png");
 
