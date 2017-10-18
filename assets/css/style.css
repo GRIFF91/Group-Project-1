@@ -7,15 +7,56 @@ h3 {
 }
 
 #background {
-  height: 7680px;
+  height: 10240px;
   width: 1280px;
   margin: 0 auto;
-  background-image: url("../images/wdraBackground.png");
-  z-index: -3;
+  background-image: url("../images/wdraBackground02.png");
+
+}
+
+#parallax_layer1_stars01 {
+    font-size: 90px;
+    margin-top: 700px;
+    margin-bottom: 800px;
+    background-image: url("../images/wdraStar.png");
+    background-size: 90% 80%;
+    position: fixed;
+    background-repeat: no-repeat;
+    width: 95%;
+    height: 95%;
+    background-position: 60% 55%;
+    pointer-events: none;
+}
+
+#parallax_layer1_stars02 {
+    font-size: 60px;
+    margin-top: 900px;
+    margin-bottom: 8000px;
+    background-image: url("../images/wdraStar.png");
+    background-size: 150% 150%;
+    position: fixed;
+    background-repeat: no-repeat;
+    width: 200%;
+    height: 300%;
+    background-position: 60% 55%;
+    pointer-events: none;
 }
 
 #parallax_layer1_rocket {
-    margin-top: 1000px;
+    font-size: 60px;
+    margin-top: 2500px;
+    background-image: url("../images/wdraRocket02.png");
+    position: fixed;
+    background-repeat: no-repeat;
+    width: 95%;
+    height: 95%;
+    background-position: 60% 56%;
+    pointer-events: none;
+}
+
+#parallax_layer1_rocket {
+    font-size: 60px;
+    margin-top: 2500px;
     background-image: url("../images/wdraRocket02.png");
     position: fixed;
     background-repeat: no-repeat;
@@ -23,35 +64,107 @@ h3 {
     height: 100%;
     width: 95%;
     height: 95%;
-    background-position: 60% 55%;
-    z-index: -1;
+    background-position: 60% 56%;
+    pointer-events: none;
+}
+#parallax_layer1_Satellite01 {
+    font-size: 60px;
+    margin-top: 5000px;
+    background-image: url("../images/wdraSatellite01.png");
+    position: fixed;
+    background-repeat: no-repeat;
+    width: 95%;
+    height: 95%;
+    background-position: 60% 50%;
+    pointer-events: none;
+}
+
+#parallax_layer1_ShipThing {
+    font-size: 20px;
+    margin-top: 1500px;
+    background-image: url("../images/wdraShipThing01.png");
+    position: fixed;
+    background-repeat: no-repeat;
+    width: 95%;
+    height: 95%;
+    background-position: 60% 50%;
     pointer-events: none;
 }
 
 #parallax_layer2_4clouds {
-    margin-top: 3500px;
-    margin-bottom: 1500px;
+    font-size: 20px;
+    margin-top: 8000px;
+    background-image: url("../images/4cloud.png");
     position: fixed;
-    background-image: url("../images/4clouds.png");
     background-repeat: no-repeat;
-    opacity: .6;
-    width: 1000%;
-    height: 1000%;
-    background-position: 80% 90%;
-    z-index: -2;
+    width: 95%;
+    height: 95%;
+    background-position: 60% 55%;
+    pacity: .8;
+    pointer-events: none;
 }
 
 #parallax_layer3_5clouds {
-    background-image: url("../images/5clouds.png");
+    font-size: 20px;
+    margin-top: 9200px;
+    background-image: url("../images/5cloud.png");
     position: fixed;
-    background: url(../images/4-cloud-png-image.png)background-repeat: no-repeat;
-    opacity: .6;
-    width: 1000%;
-    height: 1000%;
-    background-position: 30% 90%;
-    z-index: -2;
+    background-repeat: no-repeat;
+    width: 95%;
+    height: 95%;
+    opacity: .8;
+    background-position: 30% 15%;
+    pointer-events: none;
 }
 
+#parallax_layer3_6clouds {
+    font-size: 20px;
+    margin-top: 12000px;
+    background-image: url("../images/6cloud.png");
+    position: fixed;
+    background-repeat: no-repeat;
+    opacity: .8;
+    pointer-events: none;
+}
+
+#parallax_layer3_7clouds {
+    font-size: 20px;
+    margin-top: 10000px;
+    background-image: url("../images/7cloud.png");
+    position: fixed;
+    background-repeat: no-repeat;
+width: 1600px;
+height: 1600px;
+    opacity: .5;
+    pointer-events: none;
+}
+
+#parallax_layer3_8clouds {
+    font-size: 20px;
+    margin-top: 10000px;
+    background-image: url("../images/7cloud.png");
+    position: fixed;
+    background-repeat: no-repeat;
+    background-position: -300% 15%;
+width: 1600px;
+height: 1600px;
+    opacity: .5;
+    pointer-events: none;
+}
+
+#parallax_layer3_pop {
+    font-size: 200px;
+    margin-top: 13500px;
+/* background-position: 0% 56%; */
+    background-image: url("../images/wdraPop.png");
+    position: fixed;
+    background-repeat: no-repeat;
+/*     background-position: -300% 15%;
+width: 1600px;
+height: 1600px; */
+
+    pointer-events: none;
+}
 .clearfix {
   /*   overflow: auto; */
 }
@@ -79,10 +192,12 @@ h3 {
   margin: 20px;
   text-decoration: underline;
   font-size: 80px;
+    z-index: 10;
 }
 
 #sideInfo {
   text-align: center;
+    z-index: 10;
 }
 
 .prev-next-btns {
@@ -93,6 +208,7 @@ h3 {
   border-radius: 25px;
   background-color: white;
   background: rgba(255, 255, 255, 0.3);
+    z-index: 10;
 }
 
 #launchImg {
@@ -113,6 +229,7 @@ h3 {
   border-width: 2px;
   min-height: 600px;
   overflow-y: scroll;
+   z-index: 10;
 }
 
 #agencyInfo {
@@ -123,6 +240,7 @@ h3 {
   border-style: solid;
   border-width: 2px;
   min-height: 282px;
+    z-index: 10;
 }
 
 .launch-data {

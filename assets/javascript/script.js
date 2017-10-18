@@ -18,15 +18,32 @@ var launchNum = 0;
 
 // Create the parallax function.
 function parallax(){
-  var parallax_layer1_rocket = document.getElementById('parallax_layer1_rocket');
-  var parallax_layer2_4clouds = document.getElementById('parallax_layer2_4clouds');
+    var parallax_layer1_rocket = document.getElementById('parallax_layer1_rocket');
+    var parallax_layer1_Satellite01 = document.getElementById('parallax_layer1_Satellite01');
+    var parallax_layer1_ShipThing = document.getElementById('parallax_layer1_ShipThing');
+    var parallax_layer1_stars01 = document.getElementById('parallax_layer1_stars01');
+    var parallax_layer1_stars02 = document.getElementById('parallax_layer1_stars02');
+    var parallax_layer2_4clouds = document.getElementById('parallax_layer2_4clouds');
     var parallax_layer3_5clouds = document.getElementById('parallax_layer3_5clouds');
-  // Dividing the pageYOffset by a positive number will slow down the parallax effect.
-  // Adding a '-' before (window.pageYOffset) makes the parallax
-  // layer move up instead of down when scrolling.
-  parallax_layer1_rocket.style.top = -(window.pageYOffset*2)+'px';
-  parallax_layer2_4clouds.style.top = -(window.pageYOffset/10)+'px';
-    parallax_layer3_5clouds.style.top = -(window.pageYOffset/10)+'px';
+    var parallax_layer3_6clouds = document.getElementById('parallax_layer3_6clouds');
+    var parallax_layer3_7clouds = document.getElementById('parallax_layer3_7clouds');
+    var parallax_layer3_8clouds = document.getElementById('parallax_layer3_8clouds');
+    var parallax_layer3_pop = document.getElementById('parallax_layer3_pop');
+
+    // Dividing the pageYOffset by a positive number will slow down the parallax effect.
+    // Adding a '-' before (window.pageYOffset) makes the parallax
+    // layer move up instead of down when scrolling.
+    parallax_layer1_rocket.style.top = -(window.pageYOffset*2)+'px';
+    parallax_layer1_Satellite01.style.top = -(window.pageYOffset*2)+'px';
+    parallax_layer1_ShipThing.style.top = -(window.pageYOffset/2.6)+'px';
+    parallax_layer1_stars01.style.top = -(window.pageYOffset*8)+'px';
+    parallax_layer1_stars02.style.top = -(window.pageYOffset*3)+'px';
+    parallax_layer2_4clouds.style.top = -(window.pageYOffset*1.5)+'px';
+    parallax_layer3_5clouds.style.top = -(window.pageYOffset*1.7)+'px';
+    parallax_layer3_6clouds.style.top = -(window.pageYOffset*1.8)+'px';
+    parallax_layer3_7clouds.style.top = -(window.pageYOffset*1.8)+'px';
+    parallax_layer3_8clouds.style.top = -(window.pageYOffset*1.8)+'px';
+    parallax_layer3_pop.style.top = -(window.pageYOffset*1.8)+'px';
 }
 // Add an event listener which will detect scrolling and run
 // the parallax function.
